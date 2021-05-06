@@ -8,7 +8,7 @@ class Course(models.Model):
     hours = models.PositiveIntegerField('Количество часов', blank=True)
     date = models.DateField('Дата', blank=True)
     price = models.PositiveIntegerField('Цена', blank=True)
-    count_themes = models.PositiveIntegerField('Количество тем', blank=True)
+
 
     class Meta:
         verbose_name = 'Курс',
