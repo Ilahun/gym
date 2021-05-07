@@ -9,8 +9,17 @@ class Course(models.Model):
     date = models.DateField('Дата', blank=True)
     price = models.PositiveIntegerField('Цена', blank=True)
     count_themes = models.PositiveIntegerField('Количество тем', blank=True)
-    count_themes = models.PositiveIntegerField('Количество тем', blank=True)
 
     class Meta:
         verbose_name = 'Курс',
         verbose_name_plural = 'Курсы'
+
+
+class Task(models.Model):
+    task = models.FileField('Файл', blank=True)
+    description = models.CharField('Описание задания', max_length=12555, blank=True)
+
+
+class Meta:
+    verbose_name = 'Задание',
+    verbose_name_plural = 'Задания'
