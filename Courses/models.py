@@ -16,6 +16,7 @@ class Course(models.Model):
 
 
 class Task(models.Model):
+    name = models.CharField('Название задания', max_length=255, blank=True)
     task = models.FileField('Файл', blank=True)
     description = models.CharField('Описание задания', max_length=12555, blank=True)
 
