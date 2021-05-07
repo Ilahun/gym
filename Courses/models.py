@@ -21,7 +21,9 @@ class Course(models.Model):
 
 class Task(models.Model):
     name = models.CharField('Название задания', max_length=255, blank=True)
-    task = models.FileField('Файл', blank=True)
+    task = models.FileField('Файл', blank=True, upload_to='videos/')
+    file_1  = models.FileField('Файл', blank=True, upload_to='files/')
+    file_2  = models.FileField('Файл', blank=True, upload_to='files/')
     description = models.CharField('Описание задания', max_length=12555, blank=True)
 
 
